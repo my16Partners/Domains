@@ -32,7 +32,7 @@
 
     <input type="text" id="subject" name="subject" placeholder="Subject" />
     <BR>
-    <textarea name="text" placeholder="Message"></textarea>
+    <textarea name="text" id="Message" placeholder="Message"></textarea>
       <BR>
     <input type="hidden" name="access_token" value="mbf7j3qf4w3hz9mxqxo4c4jk" />
       <!-- return urls can be fully qualified -OR-
@@ -72,7 +72,7 @@
         var space = " ";
         document.getElementById("subject").value = newText;
         document.getElementById("PhoneNumber").value = space;
-        document.getElementById("Email").value = space;
+        document.getElementById("Message").value = newMessage;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
