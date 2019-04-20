@@ -12,26 +12,34 @@
   <h3>Domains Starting at $500 (USD)<h3>
     <p1>Contact us to buy: </p1>
       <BR>
-    <button onclick='GoToPage("my16.com")' > my16.com </button>
+    <button onclick='GoToPage("my16.com", "$500")' > my16.com </button>
     <BR>
-      <button onclick='GoToPage("GumKit.com")' > GumKit.com </button>
+      <button onclick='GoToPage("GumKit.com", "$500")' > GumKit.com </button>
     <BR>
-       <button onclick='GoToPage("FreeAnnualReview.com")' > FreeAnnualReview.com </button>
+       <button onclick='GoToPage("FreeAnnualReview.com", "$500")' > FreeAnnualReview.com </button>
     <BR>
-      <button onclick='GoToPage("BidCar.me")' > BidCar.me </button>
+      <button onclick='GoToPage("BidCar.me", "$500")' > BidCar.me </button>
     <BR>
       <h3>Domains Starting at $300 (USD)<h3>
       <p1>Contact us to buy: </p1>
       <BR>
-      <button onclick='GoToPage("PieSmart.com")' > PieSmart.com </button>
+      <button onclick='GoToPage("PieSmart.com", "$300")' > PieSmart.com </button>
     <BR>
       <BR>
     
   <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
 
+    
+    <input type="text" id="Name" name="Name" placeholder="Name" />
+    <BR>
+      
+      <textarea name="ContactInfo" id="ContactInfo" placeholder="Contact Info"></textarea>
+      <BR>
+        
     <input type="text" id="subject" name="subject" placeholder="Subject" />
     <BR>
+      
     <textarea name="text" id="Message" placeholder="Message"></textarea>
       <BR>
     <input type="hidden" name="access_token" value="mbf7j3qf4w3hz9mxqxo4c4jk" />
@@ -68,8 +76,9 @@
     <script>
       function GoToPage(a, b){
         var newText = "I am interested in "+ a;
-        var newMessage = "I would like this domain, " + a + ", for its price, " + b + ".";
-        var space = " ";
+        var newMessage = "I would like this domain, " + a + ", for its price, " + b + ". ";
+        newMessage += "I am " + document.getElementById("Name").value + ". ";
+        newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
         document.getElementById("subject").value = newText;
         document.getElementById("Message").value = newMessage;
         window.scrollTo(0,document.body.scrollHeight);
