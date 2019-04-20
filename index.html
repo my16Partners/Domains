@@ -30,7 +30,7 @@
   <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
 
-    <input type="text" name="subject" placeholder="Subject" />
+    <input type="text" id="subject" name="subject" placeholder="Subject" />
     <textarea name="text" placeholder="Message"></textarea>
     <input type="hidden" name="access_token" value="mbf7j3qf4w3hz9mxqxo4c4jk" />
       <!-- return urls can be fully qualified -OR-
@@ -66,7 +66,7 @@
     <script>
       function GoToPage(a){
         var newText = "I am intrested in "+ a;
-        document.getElementByName("subject").value = newText;
+        document.getElementById("subject").value = newText;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
