@@ -43,9 +43,9 @@
    
     <input type="text" name="reply_to"
                 placeholder="Your Email" />
-<BR>
+<!-- <BR>
     <input type="text" id="PhoneNumber" name="extra_phone_number"
-                placeholder="Phone Number(Optional)" />
+                placeholder="Phone Number(Optional)" /> -->
    <BR>
     <input id="submit_form" type="submit" value="Send" />
      <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
@@ -71,7 +71,6 @@
         var newMessage = "I would like this domain, " + a + ", for its price, " + b + ".";
         var space = " ";
         document.getElementById("subject").value = newText;
-        document.getElementById("PhoneNumber").value = space;
         document.getElementById("Message").value = newMessage;
         window.scrollTo(0,document.body.scrollHeight);
       }
