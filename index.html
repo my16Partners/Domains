@@ -54,7 +54,8 @@
     
     <script>
       function GoToPage(a){
-        document.getElementById("subject").innerHTML = "I am intrested in "+ a;
+        var newText = "I am intrested in "+ a;
+        document.getElementById("subject").value = newText;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
