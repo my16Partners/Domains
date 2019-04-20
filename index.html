@@ -17,7 +17,7 @@
   <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
 
-    <input type="text" name="subject" placeholder="Subject" />
+    <input type="text" id="subject" name="subject" placeholder="Subject" />
     <BR>
     <textarea name="text" placeholder="Message"></textarea>
       <BR>
@@ -54,7 +54,7 @@
     
     <script>
       function GoToPage(a){
-        document.getElementByName("subject") = "I am intrested in "+ a;
+        document.getElementById("subject") = "I am intrested in "+ a;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
