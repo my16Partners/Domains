@@ -30,10 +30,8 @@
   <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
 
-    <input type="text" id="subject" name="subject" placeholder="Subject" />
-    <BR>
+    <input type="text" name="subject" placeholder="Subject" />
     <textarea name="text" placeholder="Message"></textarea>
-      <BR>
     <input type="hidden" name="access_token" value="mbf7j3qf4w3hz9mxqxo4c4jk" />
       <!-- return urls can be fully qualified -OR-
          start with / for root relative -OR-
@@ -41,18 +39,18 @@
     <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
     <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
    
-     <input type="text" name="reply_to" placeholder="Your Email" />
-<BR>
+    <input type="text" name="reply_to"
+                placeholder="Your Email" />
+
     <input type="text" name="extra_phone_number"
-                placeholder="Phone Number (optional)" />
-   <BR>
+                placeholder="Phone Number(Optional)" />
+   
     <input id="submit_form" type="submit" value="Send" />
-    <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
-<!--     <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p> -->
+     <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+<!--    <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p> -->
 </form>
      
-<!-- optional, prevents the submit button from being pressed more than once -->
-<script>
+        <script>
     var submitButton = document.getElementById("submit_form");
     var form = document.getElementById("email_form");
     form.addEventListener("submit", function (e) {
@@ -68,7 +66,7 @@
     <script>
       function GoToPage(a){
         var newText = "I am intrested in "+ a;
-        document.getElementById("subject").value = newText;
+        document.getElementByName("subject").value = newText;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
