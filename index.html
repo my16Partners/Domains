@@ -44,7 +44,7 @@
     <input type="text" name="reply_to"
                 placeholder="Your Email" />
 <BR>
-    <input type="text" name="extra_phone_number"
+    <input type="text" id="PhoneNumber" name="extra_phone_number"
                 placeholder="Phone Number(Optional)" />
    <BR>
     <input id="submit_form" type="submit" value="Send" />
@@ -66,9 +66,13 @@
      </div>
     
     <script>
-      function GoToPage(a){
+      function GoToPage(a, b){
         var newText = "I am interested in "+ a;
+        var newMessage = "I would like this domain, " + a + ", for its price, " + b + ".";
+        var space = " ";
         document.getElementById("subject").value = newText;
+        document.getElementById("PhoneNumber").value = space;
+        document.getElementById("Email").value = space;
         window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
