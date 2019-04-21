@@ -51,9 +51,9 @@
    
     <input type="text" name="reply_to"
                 placeholder="Your Email" />
-<!-- <BR>
-    <input type="text" id="PhoneNumber" name="extra_phone_number"
-                placeholder="Phone Number(Optional)" /> -->
+        <BR>
+<textarea name="PhoneNumbers" id="PhoneNumbers" placeholder="Please List all Phone Numbers We can contact you with."></textarea>
+        
    <BR>
     <input id="submit_form" type="submit" value="Send" />
      <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
@@ -65,6 +65,7 @@
             var newMessage = document.getElementById("Message").value;
         newMessage += ". I am " + document.getElementById("Name").value + ". ";
         newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
+        newMessage += "My Phone Number(s) are " + document.getElementById("PhoneNumbers").value;
         document.getElementById("Message").value = newMessage;
           }
           
