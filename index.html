@@ -55,12 +55,20 @@
     <input type="text" id="PhoneNumber" name="extra_phone_number"
                 placeholder="Phone Number(Optional)" /> -->
    <BR>
-    <input onclick="Send()" id="submit_form" type="submit" value="Send" />
+    <input id="submit_form" type="submit" value="Send" />
      <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
 <!--    <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p> -->
 </form>
      
         <script>
+          document.getElementById('submit_form').onclick = function () {
+            var newMessage = document.getElementById("Message").value;
+        newMessage += "I am " + document.getElementById("Name").value + ". ";
+        newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
+        document.getElementById("subject").value = newText;
+        document.getElementById("Message").value = newMessage;
+          }
+          
     var submitButton = document.getElementById("submit_form");
     var form = document.getElementById("email_form");
     form.addEventListener("submit", function (e) {
@@ -76,18 +84,11 @@
     <script>
       function GoToPage(a, b){
         var newText = "I am interested in "+ a;
-        var newMessage = "I would like to buy this domain, " + a + ", for its price, " + b + ". ";
+        var newMessage = "I would like to buy this domain name, " + a + ", for its price, " + b + ". ";
         document.getElementById("subject").value = newText;
         document.getElementById("Message").value = newMessage;
         window.scrollTo(0,document.body.scrollHeight);
       }
-      
-      function Send(){
-        var newMessage = document.getElementById("Message").value;
-        newMessage += "I am " + document.getElementById("Name").value + ". ";
-        newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
-        document.getElementById("subject").value = newText;
-        document.getElementById("Message").value = newMessage;
-      }
+    
     </script>
   </body>
