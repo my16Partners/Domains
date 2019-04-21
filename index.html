@@ -77,11 +77,17 @@
       function GoToPage(a, b){
         var newText = "I am interested in "+ a;
         var newMessage = "I would like this domain, " + a + ", for its price, " + b + ". ";
+        document.getElementById("subject").value = newText;
+        document.getElementById("Message").value = newMessage;
+        window.scrollTo(0,document.body.scrollHeight);
+      }
+      
+      function Send(){
+        var newMessage = document.getElementById("Message").value;
         newMessage += "I am " + document.getElementById("Name").value + ". ";
         newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
         document.getElementById("subject").value = newText;
         document.getElementById("Message").value = newMessage;
-        window.scrollTo(0,document.body.scrollHeight);
       }
     </script>
   </body>
