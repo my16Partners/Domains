@@ -28,6 +28,7 @@
       ];
       function CreateButtons(){
         for(var i = 1; i < Buttonsa.length; i++){
+          var button;
           var prevousButton = Buttonsa[i-1];
           var thisButton = Buttonsa[i];
           var objTo = document.getElementById('RequestNames');
@@ -37,7 +38,7 @@
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
             objTo.appendChild(document.createElement('br'));
           }
-          var button = document.createElement("BUTTON");
+          button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
           button.onclick = function() {GoToPage(thisButton[0], thisButton[1])};
