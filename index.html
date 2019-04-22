@@ -53,9 +53,6 @@
     
     <input type="text" id="Name" name="Name" placeholder="Name" />
     <BR>
-      
-      <textarea name="ContactInfo" id="ContactInfo" placeholder="Contact Info"></textarea>
-      <BR>
         
     <input type="text" id="subject" name="subject" placeholder="Subject" />
     <BR>
@@ -72,7 +69,7 @@
     <input type="text" name="reply_to"
                 placeholder="Your Email" />
         <BR>
-<textarea name="PhoneNumbers" id="PhoneNumbers" placeholder="Please List all Phone Numbers We can contact you with."></textarea>
+<textarea name="PhoneNumbers" id="PhoneNumbers" placeholder="Phone Number"></textarea>
         
    <BR>
     <input id="submit_form" type="submit" value="Send" />
@@ -84,7 +81,6 @@
           document.getElementById('submit_form').onclick = function () {
             var newMessage = document.getElementById("Message").value;
         newMessage += ". I am " + document.getElementById("Name").value + ". ";
-        newMessage += "My contact Info is " + document.getElementById("ContactInfo").value;
         newMessage += "My Phone Number(s) are " + document.getElementById("PhoneNumbers").value;
         document.getElementById("Message").value = newMessage;
           }
