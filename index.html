@@ -43,6 +43,7 @@
           button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
+          button.setAttribute("id","ButtonId" + i);
           
           button.setAttribute("onClick", "GoToPage(Buttonsa[i][0], Buttonsa[i][1])");
 //           button.onclick = GoToPage(Buttonsa[i][0], Buttonsa[i][1]);
@@ -105,7 +106,14 @@
      </div>
         
           <script>
-      
+      function FindAndRedirect(TheirId){
+//         for(var i = 0; i < Buttonsa.length; i++){
+//           document.getElementById(""+TheirId);
+          GoToPage(Buttonsa[TheirId][0], Buttonsa[TheirId][1]);
+//         }
+      }
+            
+            
       function GoToPage(a, b){
         var newText = "I am interested in "+ a;
         var newMessage = "I would like to buy the domain name, " + a + ", for its price, $" + b + "(USD). ";
