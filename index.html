@@ -38,10 +38,12 @@
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
             objTo.appendChild(document.createElement('br'));
           }
+          var inputOne = thisButton[0];
+          var inputTwo = thisButton[1];
           button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
-          button.setAttribute('onclick','GoToPage(thisButton[0], thisButton[1]);');
+          button.setAttribute('onclick','GoToPage(inputOne, inputTwo);');
           objTo.appendChild(button);
         }
       }
