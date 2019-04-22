@@ -28,14 +28,14 @@
       ];
       function CreateButtons(){
         for(var i = 1; i < Buttons.length; i++){
-          document.createElement('br');
           var prevousButton = Buttons[i-1];
           var thisButton = Buttons[i];
           var objTo = document.getElementById('RequestNames');
+          objTo.appendChild(document.createElement('br'));
           if(Number(thisButton[1]) > prevousButton[1]){
              var newHeader = document.createElement("h3");
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
-            document.createElement('br');
+            objTo.appendChild(document.createElement('br'));
           }
           var button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
