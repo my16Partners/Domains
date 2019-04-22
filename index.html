@@ -36,6 +36,7 @@
           if(Number(thisButton[1]) > prevousButton[1]){
              var newHeader = document.createElement("h3");
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
+            objTo.appendChild(newHeader);
             objTo.appendChild(document.createElement('br'));
           }
           var inputOne = thisButton[0];
