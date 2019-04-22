@@ -28,8 +28,9 @@
       ];
       function CreateButtons(){
         for(var i = 1; i < Buttons.length; i++){
-          var prevousButton = Buttons[i-1];
-          var thisButton = Buttons[i];
+          var j = i;
+          var prevousButton = Buttons[j-1];
+          var thisButton = Buttons[j];
           var objTo = document.getElementById('RequestNames');
           objTo.appendChild(document.createElement('br'));
           if(Number(thisButton[1]) > prevousButton[1]){
