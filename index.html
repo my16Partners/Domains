@@ -28,9 +28,8 @@
       ];
       function CreateButtons(){
         for(var i = 1; i < Buttons.length; i++){
-          var j = i;
-          var prevousButton = Buttons[j-1];
-          var thisButton = Buttons[j];
+          var prevousButton = Buttons[i-1];
+          var thisButton = Buttons[i];
           var objTo = document.getElementById('RequestNames');
           objTo.appendChild(document.createElement('br'));
           if(Number(thisButton[1]) > prevousButton[1]){
@@ -41,7 +40,7 @@
           var button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
-          button.onclick = function() {GoToPage(thisButton[0], thisButton[1])};
+          button.onclick = function() {GoToPage(Buttons[i][0], Buttons[i][1])};
           objTo.appendChild(button);
         }
       }
