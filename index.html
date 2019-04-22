@@ -31,6 +31,7 @@
           document.createElement('br');
           var prevousButton = Buttons[i-1];
           var thisButton = Buttons[i];
+          var objTo = document.getElementById('RequestNames');
           if(Number(thisButton[1]) > prevousButton[1]){
              var newHeader = document.createElement("h3");
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
@@ -39,7 +40,7 @@
           var button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.onclick = function(){GoToPage(thisButton[0], thisButton[1]);};
-          document.body.RequestNames.appendChild(button);
+          objTo.appendChild(button);
         }
       }
       
