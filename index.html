@@ -31,7 +31,7 @@
             newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
           }
           var button = document.createElement("BUTTON");
-          button.value = thisButton[0];
+          button.innerHTML = thisButton[0];
           button.onclick = GoToPage(thisButton[0], thisButton[1]);
           document.body.appendChild(button);
         }
