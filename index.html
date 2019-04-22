@@ -40,7 +40,7 @@
           var button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
-          button.onclick = function(){GoToPage(thisButton[0], thisButton[1]);};
+          button.setAttribute("onclick", "GoToPage(thisButton[0], thisButton[1])");
           objTo.appendChild(button);
         }
       }
