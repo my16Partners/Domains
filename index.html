@@ -34,7 +34,7 @@
           }
           var button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
-          button.onclick = GoToPage(thisButton[0], thisButton[1]);
+          button.onclick = function(){GoToPage(thisButton[0], thisButton[1]);};
           document.body.appendChild(button);
         }
       }
