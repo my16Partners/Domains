@@ -11,21 +11,35 @@
   <body>
     <div style="text-align: center;">
       <p1>Contact us to buy: </p1>
-  <h3>Domains Starting at $500 (USD)<h3>
       <BR>
-    <button class="button button3" onclick='GoToPage("my16.com", "$500")' > my16.com </button>
-    <BR>
-      <button class="button button3" onclick='GoToPage("GumKit.com", "$500")' > GumKit.com </button>
-    <BR>
-       <button class="button button3" onclick='GoToPage("FreeAnnualReview.com", "$500")' > FreeAnnualReview.com </button>
-    <BR>
-      <button class="button button3" onclick='GoToPage("BidCar.me", "$500")' > BidCar.me </button>
-    <BR>
-      <h3>Domains Starting at $300 (USD)<h3>
-      <BR>
-      <button class="button button3" onclick='GoToPage("PieSmart.com", "$300")' > PieSmart.com </button>
-    <BR>
-      <BR>
+        <script>
+      var Buttons = [
+        //Put the Most expencive at the top!
+        ["Error", "100000"],
+        //--Name-- -Price(USD)-
+        ["my16.com", "960"],
+        ["FreeAnnualReview.com", "960"],
+        ["BidCar.me", "960"],
+        ["PieSmart.com", "480"]
+      ];
+      function CreateButtons(){
+        for(var i = 1; i < Buttons.length; i++){
+          var prevousButton = Buttons[i-1];
+          var thisButton = Buttons[i];
+          if(Number(thisButton[1]) < prevousButton[1]){
+             var newHeader = document.createElement("h3");
+            newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
+          }
+          var button = document.createElement("input");
+          button.type = "button";
+          button.value = thisButton[0];
+          button.onclick = GoToPage(thisButton[0], thisButton[1]);
+          document..appendChild(button);
+        }
+      }
+      
+       </script>
+        <BR>
     
   <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
@@ -80,31 +94,6 @@
 </script> 
     
      </div>
-    
-    <script>
-      var Buttons = [
-        //Put the Most expencive at the top!
-        ["Error", "100000"],
-        //--Name-- -Price(USD)-
-        ["my16.com", "500"]
-      ];
-      function CreateButtons(){
-        for(var i = 1; i < Buttons.length; i++){
-          var prevousButton = Buttons[i-1];
-          var thisButton = Buttons[i];
-          if(Number(thisButton[1]) < prevousButton[1]){
-             var newHeader = document.createElement("h3");
-            newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
-          }
-          var button = document.createElement("input");
-          button.type = "button";
-          button.value = thisButton[0];
-          button.onclick = GoToPage(thisButton[0], thisButton[1]);
-          document..appendChild(button);
-        }
-      }
-      
-       </script>
         
           <script>
       
