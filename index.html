@@ -82,6 +82,32 @@
      </div>
     
     <script>
+      var Buttons = [
+        //Put the Most expencive at the top!
+        ["Error", "100000"],
+        //--Name-- -Price(USD)-
+        ["my16.com", "500"]
+      ];
+      function CreateButtons(){
+        for(var i = 1; i < Buttons.length; i++){
+          var prevousButton = Buttons[i-1];
+          var thisButton = Buttons[i];
+          if(Number(thisButton[1]) < prevousButton[1]){
+             var newHeader = document.createElement("h3");
+            newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
+          }
+          var button = document.createElement("input");
+          button.type = "button";
+          button.value = thisButton[0];
+          button.onclick = GoToPage(thisButton[0], thisButton[1]);
+          document..appendChild(button);
+        }
+      }
+      
+       </script>
+        
+          <script>
+      
       function GoToPage(a, b){
         var newText = "I am interested in "+ a;
         var newMessage = "I would like to buy the domain name, " + a + ", for its price, " + b + ". ";
