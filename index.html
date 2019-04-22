@@ -33,11 +33,11 @@
           var thisButton = Buttonsa[i];
           var objTo = document.getElementById('RequestNames');
           objTo.appendChild(document.createElement('br'));
-          console.log(Number(thisButton[1]) + Number(prevousButton[1]));
+//           console.log(Number(thisButton[1]) + Number(prevousButton[1]));
           if(Number(thisButton[1]) < Number(prevousButton[1])){
-            console.log("Yups");
+//             console.log("Yups");
              var newHeader = document.createElement("h3");
-            newHeader.value = "Domains Starting at $" + thisButton[1] + "(USD)";
+            newHeader.innerHTML = "Domains Starting at $" + thisButton[1] + "(USD)";
             objTo.appendChild(newHeader);
             objTo.appendChild(document.createElement('br'));
           }
