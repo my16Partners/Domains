@@ -43,7 +43,10 @@
           button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
-          button.onclick = GoToPage(Buttonsa[i][0], Buttonsa[i][1]);
+          
+          button.setAttribute("onClick", "GoToPage(Buttonsa[i][0], Buttonsa[i][1])");
+//           button.onclick = GoToPage(Buttonsa[i][0], Buttonsa[i][1]);
+          
           objTo.appendChild(button);
         }
       }
