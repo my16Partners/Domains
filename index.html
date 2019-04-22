@@ -43,7 +43,7 @@
           button = document.createElement("BUTTON");
           button.innerHTML = thisButton[0];
           button.setAttribute("class", "button button3");
-          button.setAttribute('onclick','GoToPage(inputOne, inputTwo);');
+          button.onclick = GoToPage(inputOne, inputTwo);
           objTo.appendChild(button);
         }
       }
