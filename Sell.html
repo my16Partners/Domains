@@ -1,4 +1,25 @@
-<form action="https://postmail.invotes.com/send"
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+<!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <Title>Buy The Domain Name YOU Want</Title>
+  
+    <div style="text-align: center;">
+  <h1>Buy The Domain Name YOU Want</h1>
+  </div>
+  </head>
+  <body>
+
+    <p1>Have a Domain? Sell it here!</p1>
+      <BR>
+    
+  </div>
+    <div style="text-align: center;">
+       
+        <BR>
+    
+  <form action="https://postmail.invotes.com/send"
     method="post" id="email_form">
 
     <input type="text" name="subject" placeholder="Subject" />
@@ -12,13 +33,19 @@
    
 
     <!-- set the reply-to address -->
-    <!-- <input type="text" name="reply_to"
-                placeholder="Your Email" /> -->
+    <input type="text" name="reply_to"
+                placeholder="Your Email" />
 
     <!-- to append extra fields, use the extra_ prefix.
         Entries will be appended to your message body. -->
-    <!-- <input type="text" name="extra_phone_number"
-                placeholder="Phone Number" /> -->
+    <input type="text" name="extra_phone_number"
+                placeholder="Phone Number" />
+      
+      <input id="DomainName" type="text" name="DomainName"
+                placeholder="Domain Name Only" />
+      
+      <input id="Price" type="text" name="Price"
+                placeholder="Price $(USD)" />
 
     <!-- to split your message into 160 chars
          for an sms gateway -->
@@ -32,6 +59,12 @@
      
 <!-- optional, prevents the submit button from being pressed more than once -->
 <script>
+     document.getElementById('submit_form').onclick = function () {
+            var newMessage = document.getElementById("Message").value;
+        newMessage += " I want to sell " + document.getElementById("DomainName").value + " for " + document.getElementById("Price").value;
+        document.getElementById("Message").value = newMessage;
+          }
+    
     var submitButton = document.getElementById("submit_form");
     var form = document.getElementById("email_form");
     form.addEventListener("submit", function (e) {
@@ -41,3 +74,9 @@
         }, 1);
     });
 </script> 
+     
+        
+    
+     </div>
+  
+          </body>
