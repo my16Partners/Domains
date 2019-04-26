@@ -24,13 +24,13 @@
   color: white;
 }
 
-.button2 {
+.button1 {
   background-color: white; 
   color: black; 
   border: 2px solid #13b045;
 }
 
-.button2:hover {
+.button1:hover {
   background-color: #13b045;
   color: white;
 }
